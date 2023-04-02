@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import {createConnection} from "typeorm";
-import {routes} from "./routes";
+import { createConnection } from "typeorm";
+import { routes } from "./routes";
 import dotenv from 'dotenv';
 import cookieParser from "cookie-parser";
-import {createClient} from "redis";
+import { createClient } from "redis";
 
 dotenv.config();
 
@@ -21,7 +21,7 @@ createConnection().then(async () => {
     app.use(express.json());
     app.use(cors({
         credentials: true,
-        origin: ['http://localhost:3000', 'http://localhost:4000', 'http://localhost:5000']
+        origin: ['http://localhost:3000', 'http://localhost:4000', 'http://localhost:5000', 'http://localhost:8000']
     }));
 
     routes(app);
