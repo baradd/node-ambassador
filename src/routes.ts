@@ -1,7 +1,7 @@
-import {Router} from "express";
-import {AuthenticatedUser, Login, Logout, Register, UpdateInfo, UpdatePassword} from "./controller/auth.controller";
-import {AuthMiddleware} from "./middleware/auth.middleware";
-import {Ambassadors, Rankings} from "./controller/user.controller";
+import { Router } from "express";
+import { AuthenticatedUser, Login, Logout, Register, UpdateInfo, UpdatePassword } from "./controller/auth.controller";
+import { AuthMiddleware } from "./middleware/auth.middleware";
+import { Ambassadors, Rankings } from "./controller/user.controller";
 import {
     CreateProduct,
     DeleteProduct,
@@ -10,8 +10,8 @@ import {
     ProductsFrontend,
     UpdateProduct
 } from "./controller/product.controller";
-import {CreateLink, GetLink, Links, Stats} from "./controller/link.controller";
-import {ConfirmOrder, CreateOrder, Orders} from "./controller/order.controller";
+import { CreateLink, GetLink, Links, Stats } from "./controller/link.controller";
+import { ConfirmOrder, CreateOrder, Orders } from "./controller/order.controller";
 
 
 export const routes = (router: Router) => {
